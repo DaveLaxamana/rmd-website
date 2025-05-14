@@ -14,7 +14,7 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import CreateProject from './pages/CreateProject';
 import ProjectDetails from './pages/ProjectDetails';
-import EditProject from './pages/EditProject';
+import EditProject from './pages/EditProject.jsx';
 import UserProfile from './pages/UserProfile';
 import PrivateRoute from './components/routing/PrivateRoute';
 

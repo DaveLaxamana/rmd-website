@@ -1,0 +1,39 @@
+{
+  "name": "raket-clone",
+  "version": "1.0.0",
+  "description": "Raket.ph clone - Crowdfunding Platform",
+  "private": true,
+  "scripts": {
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "client": "cd client && npm run dev",
+    "server": "cd server && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "node build.js",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/raket-clone.git"
+  },
+  "keywords": [
+    "crowdfunding",
+    "react",
+    "node",
+    "mongodb",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "concurrently": "^8.0.1",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

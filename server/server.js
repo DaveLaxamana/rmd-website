@@ -15,6 +15,18 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Serve static files from the React app in production
+if (process.env.NODE_ENV === 'production') {
+  // Set static folder
+  const __dirname = path.resolve();
+  app.use(express.static(path.join(__dirname, 'dist')));
+  
+  // Handle React routing, return all requests to React app
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  });
+}
+
 // Database connection
 mongoose
   .connect(process.env.MONGODB_URI, {
