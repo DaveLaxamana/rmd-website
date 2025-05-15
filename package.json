@@ -4,13 +4,10 @@
   "description": "Raket.ph clone - Crowdfunding Platform",
   "private": true,
   "scripts": {
-    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
-    "client": "cd client && npm run dev",
-    "server": "cd server && npm run dev",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "node build.js",
-    "start": "node server/server.js",
-    "heroku-postbuild": "npm install && npm run build"
+    "install": "npm install && cd client && npm install && cd ../server && npm install",
+    "build": "npm run install && cd client && npm run build",
+    "start": "cd server && npm start",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",

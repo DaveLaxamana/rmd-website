@@ -14,6 +14,11 @@ export default defineConfig({
     outDir: '../dist',
     emptyOutDir: true,
     sourcemap: true,
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      }
+    }
   },
   server: {
     port: 3000,
@@ -30,4 +35,7 @@ export default defineConfig({
     'process.env': {},
   },
   base: '/',
+  optimizeDeps: {
+    include: ['react', 'react-dom', '@mui/material']
+  }
 });
