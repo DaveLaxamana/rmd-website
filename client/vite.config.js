@@ -25,7 +25,7 @@ export default defineConfig({
     open: true,
     proxy: {
       '/api': {
-        target: 'https://your-backend-url.netlify.app',
+        target: 'https://raket-clone.netlify.app/.netlify/functions/api',
         changeOrigin: true,
         secure: false,
       },
