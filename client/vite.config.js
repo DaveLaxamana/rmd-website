@@ -11,7 +11,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: '../dist',
+    outDir: 'dist',
     emptyOutDir: true,
     sourcemap: true,
     rollupOptions: {
@@ -25,7 +25,7 @@ export default defineConfig({
     open: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'https://your-backend-url.netlify.app',
         changeOrigin: true,
         secure: false,
       },

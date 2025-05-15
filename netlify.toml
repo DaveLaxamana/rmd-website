@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = "client/dist"
+
+[functions]
+  node_bundler = "webpack"
+
+[functions.server]
+  environment = ["MONGODB_URI", "JWT_SECRET"]
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

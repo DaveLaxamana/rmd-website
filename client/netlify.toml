@@ -1,0 +1,15 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[dev]
+  command = "npm run dev"
+  port = 3000
+
+[functions]
+  node_bundler = "webpack"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
